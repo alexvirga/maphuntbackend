@@ -5,11 +5,12 @@ class GamesController < ApplicationController
     end
 
     def create
-        game = Game.create()
+        @game = Game.create()
         loop do
-            Card.create(game_id: game.id, location_id: Location.find(rand(1..Location.all.length)).id)
-            break if (game.cards.length > 3)  
+            Card.create(game_id: @game.id, location_id: Location.find(rand(1..Location.all.length)).id)
+            break if (@game.cards.all.length > 3)  
         end
+        render json: @game.locations
     end
 
     def update
@@ -19,6 +20,6 @@ class GamesController < ApplicationController
 
     private
     def game_params
-        params.require(:game).permit(number:, time:)
+        params.require(:game).permit(:number, :time)
     end
 end
