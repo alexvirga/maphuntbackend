@@ -1,6 +1,9 @@
 class ScoresController < ApplicationController
     def index
         scores = Score.all
+        scores = scores.sort do |a,b| 
+            [b.number, a.time] <=> [a.number, b.time]
+        end
         render json: scores
     end
 
