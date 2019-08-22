@@ -13,11 +13,6 @@ class GamesController < ApplicationController
         render json: @game.locations
     end
 
-    def update
-        game = Game.find(params[:id])
-        game.number += 1
-    end
-
     private
     def game_params
         params.require(:game).permit(:number, :time)
