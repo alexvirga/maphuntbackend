@@ -5,6 +5,6 @@ class CardsController < ApplicationController
     end
 
     def destroy
-        Game.delete_all
+        Card.delete_all
     end
 end

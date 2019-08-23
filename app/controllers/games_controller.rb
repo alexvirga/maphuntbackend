@@ -5,6 +5,8 @@ class GamesController < ApplicationController
     end
 
     def create
+        Game.delete_all
+        Card.delete_all
         @game = Game.create()
         loop do
             Card.create(game_id: @game.id, location_id: Location.find(rand(1..Location.all.length)).id)
