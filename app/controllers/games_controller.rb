@@ -13,6 +13,10 @@ class GamesController < ApplicationController
         render json: @game.locations
     end
 
+    def destroy
+        Game.delete_all
+    end
+
     private
     def game_params
         params.require(:game).permit(:number, :time)
