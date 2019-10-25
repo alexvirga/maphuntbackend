@@ -1,24 +1,27 @@
-# README
+Map Quest
+========================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An interactive scavenger hunt game using Google Street View. Players look for given locations and landmarks by navigating through the Street View.
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+Run `bundle install` in the project directory.
+Then run `rails db:migrate`.
+Then run `rails db:seed`.
 
-* System dependencies
+Install the frontend of the project following the instructions in that README: [Map Quest Frontend](https://github.com/alexvirga/maphuntfrontend)
 
-* Configuration
+## Running the App
 
-* Database creation
+Run `rails s` to start the server.
 
-* Database initialization
+Then get the frontend running by following the instructions in the link above. 
 
-* How to run the test suite
+## Tech/Framework Used
 
-* Services (job queues, cache servers, search engines, etc.)
+This project was built using Ruby 2.6.1 and Rails 5.2.3
 
-* Deployment instructions
+## Authors
 
-* ...
+Adrienne Miranda  
+Alex Virga
